@@ -38,7 +38,6 @@ footer {
 
 /*TYPOGRAPHY*/
 h1, h2, h3, h4, h5, h6 {
-    text-align: left;
     color: black;
 }
 
@@ -48,7 +47,6 @@ h1 {
 }
 
 .h1 {
-    text-align: left;
     color: black;
     font-size: 2em;
     margin: 0.67em 0;
