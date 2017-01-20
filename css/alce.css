@@ -89,6 +89,7 @@ p {
 }
 
 ul, ol {
+    text-align: left;
     line-height: 1.8;
     margin: 0 0 1em 1.5em;
 }
@@ -98,6 +99,7 @@ ul {
 }
 
 dl {
+    text-align: left;
     line-height: 1.8;
     margin: 0 0 1em 0;
 }
@@ -111,7 +113,6 @@ dd:before {
 }
 
 blockquote {
-    text-align: left;
     margin: 1em 40px;
     border-left: 5px solid #043852;
 }
@@ -189,12 +190,20 @@ a:hover, a:active {
     align-self: flex-start;
 }
 
-.clear {
- clear: both;
+.text-lt {
+    text-align: left;
+}
+
+.text-rt {
+    text-align: right;
 }
 
 .text-center {
     text-align: center;
+}
+
+.clear {
+ clear: both;
 }
 
 .margins-0 {
@@ -205,8 +214,8 @@ a:hover, a:active {
 form {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    text-align: left;
+    padding: 20px 1%;
+    margin: 0 auto;
 }
 
 label {
@@ -219,7 +228,7 @@ input, textarea, select {
     margin: 0 0 20px 0;
     border: 2px solid #043852;
     background: #e6e7e8;
-    padding: 6px;
+    padding: 8px;
     font-size: 100%;
 }
 
@@ -258,6 +267,11 @@ input[type="submit"], input[type="reset"] {
     text-align: center;
 }
 
+.one-column img {
+    display: block;
+    margin: auto;
+}
+
 /*BOXED COLUMNS*/
 .box {
     background-color: lightgray;
@@ -280,7 +294,7 @@ input[type="submit"], input[type="reset"] {
 
     /*FORMS*/
     form {
-        margin: 0 25%;
+        max-width: 500px;
     }
 
     /*IMAGE HOVER EFFECT*/
@@ -412,6 +426,9 @@ input[type="submit"], input[type="reset"] {
     }
     .three-columns-20 {
         flex-basis: 18.8%;
+    }
+    .three-columns-10 {
+        flex-basis: 9.4%;
     }
     .four-columns {
         flex-basis: 23%;
