@@ -125,6 +125,10 @@
 					<dd>For use in a three column design</dd>
 					<dd>All three columns <b>must</b> equal 100%</dd>
 					<dd>This produces a column that takes up 20% of the available container's width</dd>
+					<dt><code>three-columns-10</code></dt>
+					<dd>For use in a three column design</dd>
+					<dd>All three columns <b>must</b> equal 100%</dd>
+					<dd>This produces a column that takes up 10% of the available container's width</dd>
 				</dl>
 			</div>
 <!-- BOXED COLUMNS -->
@@ -276,7 +280,6 @@
 				<p>Putting multiple checkboxes or radio buttons in one <code>&lt;div&gt;</code> will keep them all inline. For separate lines, put each checkbox or radio button into it's own <code>&lt;div&gt;</code></p>
 				<p>Likewise, if I want a Submit and Reset button to be on the same line they need to be put together in one <code>&lt;div&gt;</code></p>
 				<p>Just a reminder about radio buttons: they need to have the same name="" so that way only one can be selected at a time. Different names, or just no  names entered, will leave all the radio buttons selectable at the same time.</p>
-				<p>It's the form's margin: 0 25% that is giving it it's width. If I want the form to be inside one column and text to be inside a second column next to it (both of these columns inside a "row") then this margin has to be changed/removed so the form isn't too small. I added a utility class called "margins-0" that could be added to the form if needed. Also, the form's padding, specifically the padding-top, will need to be removed so that the top of the columns, form and text, are both flush. I won't be making a utility class for this, it's something that can be added per site in it's custom css.</p>
 			</div>
 			<form action="" method="" id="form">
 	            <label>Name:</label>
@@ -313,11 +316,60 @@
 			        </form>
 				</div>
 				<div class="two-columns">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>For bigger screens the form has a max width of 500px. If I want the form to be inside one column and text to be inside a second column next to it (both of these columns inside a "row"), the form's padding, specifically the padding-top, will need to be removed so that the top of the columns, form and text, are both flush. I won't be making a utility class for this, it's something that can be added per site in it's custom css.</p>
 				</div>
 			</div>
 <!-- BUTTONS & LINKS -->
-			<h2 id="btns">Buttons & Links <a href="#top"><small>top</small></a></h2>
+			<div class="one-column">
+				<h2 id="btns">Buttons & Links <a href="#top"><small>top</small></a></h2>
+				<p>Standard styling for buttons built using:</p>
+				<ul>
+					<li><code>class="button"</code></li>
+					<li><code>&lt;button&gt;&lt;/button&gt;</code></li>
+					<li><code>&lt;input type="submit"&gt;</code></li>
+					<li><code>&lt;input type="reset"&gt;</code></li>
+					<li><code>&lt;input type="button"&gt;</code></li>
+				</ul>
+				<div class="one-column text-center">
+					<span class="button">Class Button</span>
+					<button>Button Tag</button>
+					<input type="submit" value="Input Submit"/>
+					<input type="reset" value="Input Reset"/>
+					<input type="button" value="Input Button"/>
+				</div>
+				<p>Buttons can also be given a columned class to control their size.</p>
+				<p><b>Example:</b></p>
+				<pre>
+&lt;div class="row"&gt;
+  &lt;button&gt;
+    Three columns
+  &lt;/button&gt;
+  &lt;button&gt;
+    Three columns
+  &lt;/button&gt;
+  &lt;button&gt;
+    Three columns
+  &lt;/button&gt;
+&lt;/div&gt;
+			</pre>
+				<div class="row">
+					<button class="three-columns">Three columns</button>
+					<button class="three-columns">Three columns</button>
+					<button class="three-columns">Three columns</button>
+				</div>
+				<br />
+				<p>Standard styling for text links:</p>
+				<ul>
+					<li><code>text-decoration: none</code></li>
+					<li><code>color: #319ea3</code></li>
+					<li>:hover & :active states
+						<ul>
+							<li><code>color: #043852</code></li>
+						</ul>
+					</li>
+				</ul>
+				<p><b>Example:</b> <a href="#btns">This is a link</a></p>
+			</div>
 <!-- UTILITY CLASSES -->
 			<h2 id="utility">Utility Classes <a href="#top"><small>top</small></a></h2>
 
@@ -333,3 +385,4 @@
 	</body>
 
 </html>
+
