@@ -127,6 +127,113 @@ code {
     background-color: #ededf5;
 }
 
+/*LINKS*/
+a {
+    text-decoration: none;
+    color: #319ea3;
+}
+
+a:hover, a:active {
+    color: #043852;
+}
+
+/*FORMS*/
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 1%;
+    margin: 0 auto;
+}
+
+label, .label-inline {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input, textarea, select, .input-inline {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 0 20px 0;
+    border: 2px solid #043852;
+    background: #e6e7e8;
+    padding: 8px;
+    font-size: 100%;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+}
+
+select.arrow{
+  background-image:
+    linear-gradient(45deg, transparent 50%, #e6e7e8 50%),
+    linear-gradient(135deg, #e6e7e8 50%, transparent 50%),
+    linear-gradient(to right, #319ea3, #319ea3);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+select.arrow:focus {
+    background-image:
+      linear-gradient(45deg, transparent 50%, #319ea3 50%),
+      linear-gradient(135deg, #319ea3 50%, transparent 50%),
+      linear-gradient(to right, #e6e7e8, #e6e7e8);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5em 2.5em;
+    background-repeat: no-repeat;
+}
+
+input:focus, textarea:focus {
+    background: white;
+}
+
+#message {
+    height: 5em;
+}
+
+input[type="search"] {
+    -webkit-appearance:  none;
+}
+
+.search-bar {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#search, #name-login, #password {
+    margin: 0 5px 0 0;
+    flex: 1;
+}
+
+.search-btn-icon {
+    padding: 6px 10px;
+    margin: 0;
+}
+
+.search-btn-word {
+    padding: 10px !important;
+    margin: 0 !important;
+}
+
+.login-label {
+    margin-right: 10px;
+}
+
 /*BUTTONS*/
 .button, button, input[type="submit"], input[type="reset"], input[type="button"] {
   display: inline-block;
@@ -145,6 +252,10 @@ code {
   box-sizing: border-box;
 }
 
+input[type="submit"], input[type="reset"], input[type="button"] {
+    align-self: center;
+}
+
 .button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
     color: #319ea3;
     border-color: #319ea3;
@@ -155,16 +266,6 @@ code {
     background-color: #319ea3;
     border-color: #319ea3;
     transition: none;
-}
-
-/*LINKS*/
-a {
-    text-decoration: none;
-    color: #319ea3;
-}
-
-a:hover, a:active {
-    color: #043852;
 }
 
 /*IMAGE HOVER EFFECT*/
@@ -210,40 +311,6 @@ a:hover, a:active {
     margin: 0;
 }
 
-/*FORMS*/
-form {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 1%;
-    margin: 0 auto;
-}
-
-label {
-    text-align: left;
-    margin-bottom: 5px;
-}
-
-input, textarea, select {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0 0 20px 0;
-    border: 2px solid #043852;
-    background: #e6e7e8;
-    padding: 8px;
-    font-size: 100%;
-}
-
-input:focus, textarea:focus {
-    background: white;
-}
-
-#message {
-    height: 5em;
-}
-
-input[type="submit"], input[type="reset"] {
-    align-self: center;
-}
-
 /*CAPTIONS*/
 .captions p {
   position: relative;
@@ -267,11 +334,6 @@ input[type="submit"], input[type="reset"] {
     text-align: center;
 }
 
-.one-column img {
-    display: block;
-    margin: auto;
-}
-
 /*BOXED COLUMNS*/
 .box {
     background-color: lightgray;
@@ -280,17 +342,10 @@ input[type="submit"], input[type="reset"] {
     margin: 1em 0;
 }
 
-
 /**********************************
 600PX MEDIA QUERY
 ***********************************/
 @media screen and (min-width: 600px) {
-
-    /*UTILITIES*/
-    .margins-1 {
-        margin-left: 1%;
-        margin-right: 1%
-    }
 
     /*FORMS*/
     form {
@@ -357,16 +412,14 @@ input[type="submit"], input[type="reset"] {
     .row {
         display: flex;
         flex-wrap: wrap;
+        margin-left: -1%;
+        margin-right: -1%;
     }
 
     /*automatic 2 column design for inbetween screen sizes*/
     .six-columns, .four-columns, .three-columns, .two-columns, .two-columns-90, .two-columns-80, .two-columns-70, .two-columns-60, .two-columns-40, .two-columns-30, .two-columns-20, .two-columns-10, .three-columns-60, .three-columns-50, .three-columns-40, .three-columns-30, .three-columns-25, .three-columns-20 {
         margin: 0 1% 10px 1%;
         flex-basis: 48%;
-    }
-
-     .one-column {
-        margin: 0 1% 10px 1%;
     }
 }
 
@@ -375,10 +428,21 @@ input[type="submit"], input[type="reset"] {
 ***********************************/
 @media screen and (min-width: 950px){
 
-    /*GRID*/
-    .one-column {
-        flex-basis: 98%;
+    /*FORMS*/
+    .inline-form {
+        flex-direction: row;
+        justify-content: center;
     }
+
+    .label-inline, .input-inline {
+        margin: 0 5px 0 0;
+    }
+
+    .label-inline {
+        align-self: center;
+    }
+
+    /*GRID*/
     .two-columns {
         flex-basis: 48%;
     }
@@ -445,7 +509,6 @@ input[type="submit"], input[type="reset"] {
     .flex-in-flex img {
         max-width: 50%;
         padding-right: 2%;
-        padding-left: 2%;
         box-sizing: border-box;
     }
 }
